@@ -1,0 +1,119 @@
+/* ================================ */
+/*            Common CSS            */
+/* ================================ */
+* {
+  /* `otf-font-awesome` is required to be installed for icons */
+  padding: 0;
+  border-radius: 0;
+  min-height: 0;
+  margin: 0;
+  border: none;
+  text-shadow: none;
+  transition: none;
+  box-shadow: none;
+}
+
+/* the whole window */
+window#waybar {
+  background-color: transparent;
+  /* background-image: linear-gradient(to right, rgba(77, 126, 71, 0.3), rgba(189, 71, 53, 0.3)); */
+  background-image: linear-gradient(to right, rgba(58, 153, 117, 0.4), rgba(189, 71, 53, 0.4));
+  color: #fff4d2;
+  margin: 0;
+  border-radius: 5px;
+  border: 1px ridge rgba(200, 200, 200, 0.2);
+  /* border: 1px ridge rgba(0, 0, 0, 0.3); */
+}
+
+tooltip {
+  background-color: rgba(30, 30, 30, 0.9);
+  color: #fff4d2;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}
+
+/* .modules-left {
+  padding-left: 5px;
+}
+
+.modules-right {
+  padding-right: 5px;
+} */
+
+#custom-radeontop,
+#custom-memory,
+#custom-wifi,
+#custom-notification,
+#custom-power,
+#custom-player,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.visible,
+#workspaces button.visible:hover,
+#workspaces button.active,
+#workspaces button.active:hover,
+#workspaces button.urgent,
+#window,
+#tray,
+#disk,
+#cpu,
+#memory,
+#temperature,
+#temperature.critical,
+#pulseaudio,
+#pulseaudio.muted,
+#language,
+#clock {
+  font-family: JetBrainsMono Nerd Font Propo;
+  font-size: 14px;
+  font-weight: 400;
+
+  background-color: rgba(0, 0, 0, 0.15);
+  /* for debugging paddings / margins: */
+  /* background-color: rgba(255, 30, 30, 0.4); */
+
+  border-radius: 5px;
+  margin: 2px 2px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* ================================ */
+/*       workspaces module          */
+/* ================================ */
+#workspaces {
+  margin: 0px;
+}
+
+#workspaces button {
+  color: #fff4d2;
+  background-color: rgba(0, 0, 0, 0.2);
+  min-width: 25px;
+  padding: 0 4px;
+  margin: 5px 3px;
+}
+
+#workspaces button.active {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+#workspaces button.hover {
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* a few single-item stylings for fun and profit */
+#custom-player {
+  font-family: JetBrains;
+}
+
+#custom-power,
+#clock.time {
+  font-size: 16px;
+  font-weight: 800;
+}
+
+
+#custom-player,
+#clock.time {
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
