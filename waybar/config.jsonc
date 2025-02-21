@@ -24,7 +24,7 @@
     "custom/wifi",
     "clock#date",
     "clock#time",
-    "custom/power"
+    "group/group-power"
   ],
   // Modules configuration
   "hyprland/workspaces": {
@@ -144,7 +144,7 @@
     "escape": true
   },
   "custom/player": {
-    "exec": "~/.config/waybar/scripts/player.sh",
+    "exec": "~/.config/waybar/scripts/media-player.sh",
     "format": "{}",
     "interval": 1,
     "max-length": 50,
@@ -153,10 +153,38 @@
     "on-click-left": "playerctl previous",
     "on-click": "playerctl play-pause"
   },
+  "group/group-power": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": false
+    },
+    "modules": [
+      "custom/power", // First element is the "group leader" and won't ever be hidden
+      "custom/suspend",
+      "custom/lock",
+      "custom/reboot"
+    ]
+  },
+  "custom/suspend": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "systemctl suspend"
+  },
+  "custom/lock": {
+    "format": "󰍁",
+    "tooltip": false,
+    "on-click": "hyprlock"
+  },
+  "custom/reboot": {
+    "format": "",
+    "tooltip": false,
+    "on-click": "systemctl reboot"
+  },
   "custom/power": {
-    "on-click": "~/.config/waybar/scripts/power-menu.sh",
-    "format": "⏻",
-    "interval": 1,
-    "tooltip": false
+    "format": "",
+    "tooltip": false,
+    "on-click": "systemctl poweroff"
   }
 }

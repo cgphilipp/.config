@@ -1,6 +1,11 @@
-/* ================================ */
-/*            Common CSS            */
-/* ================================ */
+@define-color text #fff4d2;
+@define-color color-left rgba(58, 153, 117, 0.4);
+@define-color color-right rgba(189, 71, 53, 0.4);
+@define-color module-background rgba(0, 0, 0, 0.15);
+@define-color tooltip-background rgba(0, 0, 0, 0.9);
+@define-color border rgba(89, 89, 89, 0.67);
+@define-color highlight-border rgba(255, 255, 255, 0.5);
+
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   padding: 0;
@@ -16,59 +21,27 @@
 /* the whole window */
 window#waybar {
   background-color: transparent;
-  /* background-image: linear-gradient(to right, rgba(77, 126, 71, 0.3), rgba(189, 71, 53, 0.3)); */
-  background-image: linear-gradient(to right, rgba(58, 153, 117, 0.4), rgba(189, 71, 53, 0.4));
-  color: #fff4d2;
+  background-image: linear-gradient(to right, @color-left, @color-right);
+  color: @text;
   margin: 0;
   border-radius: 5px;
-  border: 1px ridge rgba(200, 200, 200, 0.2);
-  /* border: 1px ridge rgba(0, 0, 0, 0.3); */
+  border: 1px ridge @border;
 }
 
 tooltip {
-  background-color: rgba(30, 30, 30, 0.9);
+  background-color: @tooltip-background;
   color: #fff4d2;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  border: 1px solid @border;
   border-radius: 5px;
 }
 
-/* .modules-left {
-  padding-left: 5px;
-}
-
-.modules-right {
-  padding-right: 5px;
-} */
-
-#custom-radeontop,
-#custom-memory,
-#custom-wifi,
-#custom-notification,
-#custom-power,
-#custom-player,
-#workspaces button,
-#workspaces button:hover,
-#workspaces button.visible,
-#workspaces button.visible:hover,
-#workspaces button.active,
-#workspaces button.active:hover,
-#workspaces button.urgent,
-#window,
-#tray,
-#disk,
-#cpu,
-#memory,
-#temperature,
-#temperature.critical,
-#pulseaudio,
-#pulseaudio.muted,
-#language,
-#clock {
+.module {
   font-family: JetBrainsMono Nerd Font Propo;
   font-size: 14px;
   font-weight: 400;
 
-  background-color: rgba(0, 0, 0, 0.15);
+  background-color: @module-background;
   /* for debugging paddings / margins: */
   /* background-color: rgba(255, 30, 30, 0.4); */
 
@@ -103,17 +76,19 @@ tooltip {
 
 /* a few single-item stylings for fun and profit */
 #custom-player {
-  font-family: JetBrains;
+  font-family: JetBrains Arial;
 }
 
 #custom-power,
+#custom-reboot,
+#custom-lock,
+#custom-suspend,
 #clock.time {
   font-size: 16px;
   font-weight: 800;
 }
 
-
 #custom-player,
 #clock.time {
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid @highlight-border;
 }
