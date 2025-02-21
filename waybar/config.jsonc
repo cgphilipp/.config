@@ -2,12 +2,13 @@
   "layer": "bottom",
   "position": "top",
   "height": 35,
-  "spacing": 5,
+  "spacing": 8,
   "margin-top": 3,
   "margin-bottom": 3,
   "margin-right": 3,
   "margin-left": 3,
   "modules-left": [
+    "custom/logo",
     "hyprland/workspaces",
     "hyprland/window",
     "tray"
@@ -27,6 +28,10 @@
     "group/group-power"
   ],
   // Modules configuration
+  "custom/logo": {
+    "format": "󰣇",
+    "tooltip": false
+  },
   "hyprland/workspaces": {
     "disable-scroll": true,
     "active-only": false,
@@ -60,7 +65,7 @@
   },
   "cpu": {
     "interval": 1,
-    "format": " {usage:>2}%"
+    "format": " {usage}%"
   },
   "custom/radeontop": {
     "interval": 1,
