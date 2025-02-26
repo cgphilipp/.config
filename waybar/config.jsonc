@@ -2,7 +2,7 @@
   "layer": "bottom",
   "position": "top",
   "height": 35,
-  "spacing": 8,
+  "spacing": 1, // spacing is mostly handled by style.css
   "margin-top": 3,
   "margin-bottom": 3,
   "margin-right": 3,
@@ -33,26 +33,18 @@
     "tooltip": false
   },
   "hyprland/workspaces": {
-    "disable-scroll": true,
+    "format": " {icon} {windows} ",
+    "format-window-separator": " ",
+    "window-rewrite-default": "󰘔",
     "active-only": false,
-    "all-outputs": true,
-    "warp-on-scroll": false,
-    "format": "{icon}",
-    "format-icons": {
-      "1": "<span>1</span>",
-      "2": "<span>2</span>",
-      "3": "<span>3</span>",
-      "4": "<span>4</span>",
-      "5": "<span>5</span>",
-      "6": "<span>6</span>",
-      "7": "<span>7</span>",
-      "8": "<span>8</span>",
-      "9": "<span>9</span>",
-      "10": "<span>10</span>",
-      "default": "<span>0</span>"
-    },
-    "persistent-workspaces": {
-      "*": 5
+    "window-rewrite": {
+      "title<.*youtube.*>": "",
+      "title<.*twitch.*>": "",
+      "firefox": "󰈹",
+      "code": "󰨞",
+      "discord": "",
+      "alacritty": "",
+      "keepass": ""
     }
   },
   "hyprland/window": {

@@ -44,7 +44,7 @@ tooltip {
   /* for debugging paddings / margins: */
   /* background-color: rgba(255, 30, 30, 0.4); */
 
-  margin: 3px 0px;
+  margin: 3px 3px;
   border-radius: 5px;
   padding: 0px 10px;
 }
