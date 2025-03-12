@@ -66,11 +66,12 @@ tooltip {
 }
 
 #workspaces button.active {
-  border: 1px solid rgba(255, 255, 255, 0.4);
+  border: 1px solid @highlight-border;
 }
 
-#workspaces button.hover {
-  border: 1px solid rgba(255, 255, 255, 0.4);
+#workspaces button:hover {
+  background-color: @module-background;
+  border: 2px solid @highlight-border;
 }
 
 /* a few single-item stylings for fun and profit */

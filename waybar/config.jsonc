@@ -41,6 +41,8 @@
       "title<.*youtube.*>": "",
       "title<.*twitch.*>": "",
       "firefox": "󰈹",
+      "spoitfy": "",
+      "thunderbird": "",
       "code": "󰨞",
       "discord": "",
       "alacritty": "",
@@ -50,10 +52,7 @@
   "hyprland/window": {
     "format": ">> {class}",
     "max-length": 20,
-    "rewrite": {
-      "": "<span foreground= '#458588'></span> hyprland",
-      "~": " terminal"
-    }
+    "tooltip": false
   },
   "cpu": {
     "interval": 1,

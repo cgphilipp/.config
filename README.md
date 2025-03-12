@@ -14,6 +14,7 @@ Documenting my hyprland dotfiles here so I can recreate it when distro hopping o
 | **idle daemon** | hypridle |
 | **notification daemon** |	swaync |
 | **session manager** | uwsm |
+| **authentication agent** | hyprpolkitagent |
 | **login manager** | greetd + greetd-tuigreet |
 
 ## greetd setup
