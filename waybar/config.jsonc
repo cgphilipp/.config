@@ -41,7 +41,8 @@
       "title<.*youtube.*>": "",
       "title<.*twitch.*>": "",
       "firefox": "󰈹",
-      "spoitfy": "",
+      "spotify": "",
+      "steam": "",
       "thunderbird": "",
       "code": "󰨞",
       "discord": "",
@@ -55,17 +56,17 @@
     "tooltip": false
   },
   "cpu": {
-    "interval": 1,
+    "interval": 5,
     "format": " {usage}%"
   },
   "custom/radeontop": {
-    "interval": 1,
+    "interval": 5,
     "exec": "~/.config/waybar/scripts/radeon.sh",
     "format": " {}%",
     "tooltip": false
   },
   "memory": {
-    "interval": 1,
+    "interval": 5,
     "format": " {used}GB ({percentage}%)",
     "max-length": 30
   },
@@ -114,7 +115,7 @@
     "format": "{}",
     "tooltip": true,
     "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
-    "interval": 1,
+    "interval": 5,
     "min-length": 1,
     "max-length": 24
   },
