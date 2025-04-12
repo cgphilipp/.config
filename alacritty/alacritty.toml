@@ -17,3 +17,8 @@ size = 10.0
 [colors]
 primary.foreground = "#fff4d2"
 primary.background = "#000000"
+
+[[hints.enabled]]
+command = ""
+hyperlinks = true
+mouse.enabled = false

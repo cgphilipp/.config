@@ -1,0 +1,9 @@
+[Unit]
+Description=Daily Backup Job
+Requires=media-storagebox.mount
+After=media-storagebox.mount
+
+[Service]
+Type=oneshot
+ExecStart=/home/philipp/.config/script/backuphome.sh
+Type=notify

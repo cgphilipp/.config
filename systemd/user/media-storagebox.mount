@@ -1,0 +1,14 @@
+[Unit]
+Description=Mount SSHFS storagebox
+After=network.target
+Wants=network.target
+
+[Mount]
+What=u452134@u452134.your-storagebox.de:/home
+Where=/media/storagebox
+Type=fuse.sshfs
+Options=_netdev,users,idmap=user,port=23,reconnect,ServerAliveInterval=15,ServerAliveCountMax=3
+TimeoutSec=30
+
+[Install]
+WantedBy=default.target

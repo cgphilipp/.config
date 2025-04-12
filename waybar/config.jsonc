@@ -18,11 +18,12 @@
   ],
   "modules-right": [
     "pulseaudio",
+    "custom/vpn",
     "memory",
     "cpu",
     "custom/radeontop",
     "custom/notification",
-    "custom/wifi",
+    // "custom/wifi",
     "clock#date",
     "clock#time",
     "group/group-power"
@@ -109,16 +110,22 @@
     "format": "{:%H:%M}",
     "tooltip": false
   },
-  "custom/wifi": {
-    "exec": "~/.config/waybar/scripts/wifi-status.sh",
-    "return-type": "json",
-    "format": "{}",
-    "tooltip": true,
-    "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
-    "interval": 5,
-    "min-length": 1,
-    "max-length": 24
+  "custom/vpn": {
+    "exec": "~/.config/waybar/scripts/check-vpn.sh",
+    "format": " {}",
+    "tooltip": false,
+    "interval": 5
   },
+  // "custom/wifi": {
+  //   "exec": "~/.config/waybar/scripts/wifi-status.sh",
+  //   "return-type": "json",
+  //   "format": "{}",
+  //   "tooltip": true,
+  //   "on-click": "~/.config/waybar/scripts/wifi-menu.sh",
+  //   "interval": 5,
+  //   "min-length": 1,
+  //   "max-length": 24
+  // },
   "custom/notification": {
     "tooltip": false,
     "rotate": 0,

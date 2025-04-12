@@ -99,15 +99,17 @@ alias ohmyzsh="vim ~/.oh-my-zsh"
 
 export EDITOR=vim
 export PATH=~/.cargo/bin:$PATH
+export PATH=~/node_modules/.bin:$PATH
 
 alias btrfs-size='sudo btrfs qgroup show /'
+alias open=xdg-open
 alias yy=paru
 alias yyin='yy -Slq | fzf --multi --preview "paru -Si {1}" | xargs -ro paru -S'
 alias yyrm='yy -Qq | fzf --multi --preview "paru -Qi {1}" | xargs -ro paru -Rns'
 
 # add fzf fuzzy finder options to zsh
 source <(fzf --zsh)
-export FZF_EXCLUDES=".git,target,build,gdrive,.cache,.ccache,.local,.steam,.cargo,.mozilla,.thunderbird,.vscode-oss"
+export FZF_EXCLUDES=".git,target,build,.cache,.ccache,.local,.steam,.cargo,.mozilla,.thunderbird,.vscode-oss"
 export FZF_CTRL_T_OPTS="--walker-skip ${FZF_EXCLUDES}"
 export FZF_ALT_C_OPTS="--walker-skip ${FZF_EXCLUDES}" 
 
